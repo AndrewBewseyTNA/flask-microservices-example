@@ -1,0 +1,23 @@
+version: "3.9"
+networks:
+  default:
+    name: mynetwork
+services:
+  flask_service_1:
+    image: flask_service_1
+    hostname: flask_service_1
+    container_name: flask_service_1
+    ports:
+      - "1123:1123"
+  flask_service_2:
+    image: flask_service_2
+    hostname: flask_service_2
+    container_name: flask_service_2
+    ports:
+      - "2234:2234"
+  flask_service_ui_standin:
+    image: flask_service_ui_standin
+    hostname: flask_service_ui_standin
+    container_name: flask_service_ui_standin
+    ports:
+      - "5555:5555"
